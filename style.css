@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+:root{
+    --tyrian-purple: #501537;
+    --magenta: #922d50;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    background: var(--tyrian-purple);
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.9);
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-wrapper{
+    max-width: 1080px;
+    background: #fff;
+    width: 480px;
+    height: 620px;
+}
+.bmi-heads{
+    background: var(--magenta);
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.bmi-heads .bmi-head{
+    padding: 1rem 1.6rem;
+    width: 100%;
+    cursor: pointer;
+}
+.active-head{
+    background: #000;
+}
+.bmi-content{
+    padding: 2rem;
+}
+.form-group{
+    padding: 0.55rem 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+.form-group.col-3{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+}
+.form-control{
+    width: 100%;
+    font-size: 1.15rem;
+    font-family: inherit;
+    padding: 0.6rem 1.2rem;
+    margin: 0.2rem 0;
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.form-control:focus{
+    outline: 0;
+}
+.form-control::placeholder{
+    text-align: right;
+    opacity: 0.6;
+}
+.btns{
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btns .btn{
+    width: 140px;
+    margin: 0 0.5rem;
+    padding: 0.8rem 0;
+    font-family: inherit;
+    font-size: 1.15rem;
+    border: none;
+    background: var(--magenta);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    letter-spacing: 0.5px;
+}
+.btns .btn:hover{
+    outline: 0;
+    opacity: 0.9;
+}
+.btns .btn:focus{
+    outline: 0;
+}
+#bmi-usc, #bmi-si{
+    display: none;
+}
+/* js related */
+.show-bmi{
+    display: block!important;
+}
+.alert-error{
+    text-align: center;
+    padding: 1rem 1.6rem 0;
+    color: var(--magenta);
+    display: none;
+}
+.bmi-output{
+    padding: 1rem 1.6rem;
+    text-align: center;
+}
+#bmi-value{
+    padding-bottom: 0.4rem;
+}
+#bmi-category{
+    color: var(--magenta);
+}
+#bmi-gender{
+    text-transform: capitalize;
+}
